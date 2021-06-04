@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="928,520" bkcolor="#FFFFFFFF" mininfo="928,520" caption="0,0,0,32" roundcorner="10,10,10,10">
+	<Font id="1" name="微软雅黑" size="15" bold="true" italic="false" />
+	<Include source="image/scrollbar.xml" />
+	<VerticalLayout bkcolor="#FFFFFFFF">
+		<!-- 标题栏区 -->
+		<HorizontalLayout height="32" >
+			<VerticalLayout />
+			<!--占空位，占据左边所有的空位-->
+			<VerticalLayout width="77">
+				<!--右边三个控件所占的宽度-->
+				<!--<Button name="btnClose" tooltip="关闭" padding="40,15,0,0" width="16" height="15"
+						normalimage="file='skin/image/close.png' source='0,0,16,15'"
+						hotimage="file='skin/image/close.png' source='0,15,16,30'"
+						pushedimage="file='skin/image/close.png' source='0,30,16,45'"/>-->
+				<Button name="btnClose" tooltip="关闭" padding="40,2,0,0" width="28" height="30"
+						normalimage="file='skin/image/btn_close_hot.png'"
+						hotimage="file='skin/image/btn_close_hot.png'"
+						pushedimage="file='skin/image/btn_close_down.png'"/>
+			</VerticalLayout>
+		</HorizontalLayout>
+
+		<HorizontalLayout height="58">
+			<Option name="Option1" text="Option1" padding="40,28,0,0" width="60" height="30" bkcolor="#FFC5D4F2"
+				selectedtextcolor="#FF0000FF" selectedbkcolor="#FFC5D4F2" group="tabDemo" selected="true" />
+			<Option name="Option2" text="Option2" padding="20,28,0,0" width="60" height="30" bkcolor="#FFFFDC78" group="tabDemo" />
+			<Option name="Option3" text="Option3" padding="20,28,0,0" width="60" height="30" bkcolor="#FFBECEA1" group="tabDemo" />
+		</HorizontalLayout>
+
+		<TabLayout name="tabTest" padding="40,20,40,40" bkcolor="#FF757676">
+			<VerticalLayout bkcolor="#FFC5D4F2">
+				<HorizontalLayout height="40" padding="10,10,0,0">
+					<Button name="btnLogin" text="登录" tooltip="登录"
+							width="200" height="30" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA"
+							font="6" align="center"
+							normalimage="file='skin/image/login.png' source='0,0,200,30'"
+							hotimage="file='skin/image/login.png' source='0,30,200,60'"
+							pushedimage="file='skin/image/login.png' source='0,60,200,90'"
+							focusedimage="file='skin/image/login.png' source='0,90,200,120'" />
+
+					<Option name="optSticker" text="选择" textpadding="20,0,0,0" padding="10,10,0,0" 
+							width="46" height="16" bordercolor="#00A6CAF0" textcolor="#FF000000" 
+							disabledtextcolor="#FFA7A6AA" align="left" 
+							normalimage="file='skin/image/checkbox.png' dest='0,0,16,16' source='0,0,16,16'" 
+							hotimage="file='skin/image/checkbox.png' dest='0,0,16,16' source='16,0,32,16'" 
+							selectedimage="file='skin/image/checkbox.png' dest='0,0,16,16' source='32,0,48,16'" />
+
+					<Button padding="10,0,0,0" width="120" height="30" text="确定" textcolor="#00FFFBF0"
+						normalimage="file='skin/image/button_nor.bmp'"
+						hotimage="file='skin/image/button_hot.bmp'"
+						pushedimage="file='skin/image/button_down.bmp'"/>
+
+					<combo padding="10,0,0,0" width="142" height="19"
+						   textpadding="5,2,0,2"
+						   normalimage="file='skin/image/combo_nor.bmp'"
+						   pushedimage="file='skin/image/combo_hot.bmp'"
+						   hotimage="file='skin/image/combo_hot.bmp'">
+						<ListLabelElement text="张三" selected="true"/>
+						<ListLabelElement text="李四" />
+					</combo>
+
+					<DateTime padding="10,0,0,0" name="DateTime" width="160" height="25" bkcolor="#FFFFFFFF" />
+				</HorizontalLayout>
+
+				<HorizontalLayout height="40" padding="10,10,0,0">
+					<!--账号-->
+					<!--password="true"-->
+					<!--numberonly="true"-->
+					<Edit name="editUserName" width="200" height="30" 
+						  textpadding="46,2,4,2" font="1" textcolor="#FF303133" disabledtextcolor="#FFA7A6AA"
+						  normalimage="file='skin/image/text.png' source='0,0,200,30'"
+						  hotimage="file='skin/image/text.png' source='0,30,200,60'"
+						  focusedimage="file='skin/image/text.png' source='0,60,200,90'"/>
+					<Control padding="-180,4,0,0" width="18" height="21" bkimage="file='skin/image/icon_account.png'" />
+					<Label name="lblUserName" padding="10,4,0,4" text="账号"
+							width="30" height="21" textcolor="#00A0A0A4" disabledtextcolor="#FFA7A6AA" />
+				</HorizontalLayout>
+
+				<HorizontalLayout height="40" padding="10,10,0,0">
+					<Progress name="progressCtrl" width="300" height="15" 
+							  foreimage="file='skin/image/progress_fore2.png' corner='3,3,3,3'"  
+							  bkimage="file='skin/image/progress_bk.png' corner='3,3,3,3'" bkcolor="#00FFFFFF"
+							  text="80%" textcolor="#FFBECEA1" disabledtextcolor="#FFA7A6AA" align="center" textpadding="0,2,0,0"
+							  min="0" max="100" value="80" hor="true" />
+				</HorizontalLayout>
+
+				<Control height="1" bkcolor="#FF000000" padding="10,10,10,0"/>
+
+			</VerticalLayout>
+			<HorizontalLayout bkcolor="#FFFFDC78">
+				<Label  text="Option2"  align="center" />
+			</HorizontalLayout>
+			<HorizontalLayout bkcolor="#FFBECEA1" >
+				<Label  text="Option3" align="center" />
+			</HorizontalLayout>
+		</TabLayout>
+	</VerticalLayout>
+</Window>
